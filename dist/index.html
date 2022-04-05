@@ -4,36 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main.css">
     
-    <title>Invoice Generator</title>
+    <title>Yew web3</title>
   
-<link rel="preload" href="/index-154d131dd65f4826_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/index-154d131dd65f4826.js"></head>
+<link rel="preload" href="/index-5bc38c2ba4e731d1_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/index-5bc38c2ba4e731d1.js"></head>
   <body>
 
-<script type="module">import init from '/index-154d131dd65f4826.js';init('/index-154d131dd65f4826_bg.wasm');</script><script>(function () {
-    var url = 'ws://' + window.location.host + '/_trunk/ws';
-    var poll_interval = 5000;
-    var reload_upon_connect = () => {
-        window.setTimeout(
-            () => {
-                // when we successfully reconnect, we'll force a
-                // reload (since we presumably lost connection to
-                // trunk due to it being killed, so it will have
-                // rebuilt on restart)
-                var ws = new WebSocket(url);
-                ws.onopen = () => window.location.reload();
-                ws.onclose = reload_upon_connect;
-            },
-            poll_interval);
-    };
-
-    var ws = new WebSocket(url);
-    ws.onmessage = (ev) => {
-        const msg = JSON.parse(ev.data);
-        if (msg.reload) {
-            window.location.reload();
-        }
-    };
-    ws.onclose = reload_upon_connect;
-})()
-</script></body></html>
+<script type="module">import init from '/index-5bc38c2ba4e731d1.js';init('/index-5bc38c2ba4e731d1_bg.wasm');</script></body></html>
