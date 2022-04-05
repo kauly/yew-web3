@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply text-center focus:ring-4 text-lg rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none;
+  }
+  .btn-filled {
+    @apply btn text-white bg-slate-700 hover:bg-slate-800 focus:ring-slate-300;
+  }
+  .btn-disabled {
+    @apply cursor-not-allowed pointer-events-none;
+  }
+}

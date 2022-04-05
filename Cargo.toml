@@ -1,0 +1,14 @@
+[package]
+name = "rust-dapp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew =  "0.19.3"  
+web3 = { version = "0.18.0", features = [
+  "wasm",
+  "eip-1193",
+], default-features = false }
+wasm-bindgen-futures = "0.4.29"
